@@ -1,5 +1,6 @@
 #pragma once
 #include <type_traits>
+
 /// <summary>
 /// @description complex class implementation
 /// </summary>
@@ -46,6 +47,7 @@ namespace Complex__arithmatic {
 	
 		Complex& Conj() { imaj *= -1; return *this; }
 		Complex& Conj_As(Complex z) { imaj = -z.imaj; return *this; }
+		std::ostream& print(std::ostream& os,const char* option = "algebric") { return os<<"real: "<<this->real<<"\t imaj: "<<this->imaj ; }
 	};
 	template<typename Number>
 	Complex<Number> operator+(Complex<Number> U, Complex<Number> V) { return U += V; }
@@ -55,5 +57,7 @@ namespace Complex__arithmatic {
 	Complex<Number> operator*(Complex<Number> U, Complex<Number> V) { return U *= V; }
 	template<typename Number>
 	Complex<Number> operator/(Complex<Number> U, Complex<Number> V) { return U /= V; }
+	template<typename Number>
+	std::ostream& operator<<(std::ostream& os, const Complex<Number>& U) { return U.print(os); }
 }
 

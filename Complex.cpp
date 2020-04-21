@@ -14,5 +14,6 @@ int main()
 	d = c + b;
 	d *= b;
 	e = c / d;
+	Std_Complex F = a + b + e;
 	return 0;
 }
