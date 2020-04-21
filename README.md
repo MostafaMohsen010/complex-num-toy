@@ -1,2 +1,2 @@
-# complex-num-toy
-**simple exercise on with cpp**
+# complex-num-toy-example
+**simple exercise with cpp**
